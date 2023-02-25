@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { config } from './config/config';
+import { config } from './config/configuration';
+import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
@@ -13,8 +13,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     ConfigModule.forRoot({
       isGlobal: true,
       load: [config]
-    }), ProductModule,
-    MongooseModule.forRoot('mongodb://localhost/juntas3')
+    })
   
   ],
   controllers: [AppController],

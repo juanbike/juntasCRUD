@@ -3,7 +3,7 @@ import { ConfigProps } from 'src/interfaces/config.interface';
 
 
 export const config = ():ConfigProps => ({
-    port: parseInt(process.env.PORT, 10) || 8080,
+    port: parseInt(process.env.PORT, 3000) || 5000,
     api: {
       apiUrl: process.env.API_URL,
       httpTimeout: 1000,
